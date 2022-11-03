@@ -1,4 +1,5 @@
-const { fetchData } = require('./http');
+const {fetchData} = require('./http');
+const {printTitle} = require('./util');
 
 const button = document.querySelector('button');
 
@@ -10,11 +11,6 @@ const loadTitle = () => {
     });
 };
 
-const printTitle = () => {
-    loadTitle().then(title => {
-        console.log(title);
-    });
-};
 
 button.addEventListener('click', printTitle);
 
